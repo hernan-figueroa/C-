@@ -7,7 +7,6 @@
 #include "Player.h"
 #include "Skeleton.h"
 #include "TileMap.h"
-#include "Botiquin.h"
 #include "Element.h"
 #include "Math.h"
 #include "Menu.h"

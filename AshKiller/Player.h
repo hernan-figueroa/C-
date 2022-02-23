@@ -8,9 +8,7 @@
 #include"Animation.h"
 #include "Skeleton.h"
 #include "Bullet.h"
-#include"Botiquin.h"
 #include"Element.h"
-
 
 
 class Player : public Character
