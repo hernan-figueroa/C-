@@ -339,7 +339,16 @@ int main()
 
                                 std::sort(registros.begin(),registros.end(),&comp);
 
-                                for(int i = 0; i<registros.size(); i++)
+
+                                int cantRegistros;
+
+                                 if(registros.size()<= 3){
+                                     cantRegistros = registros.size();
+                                 }else{
+                                     cantRegistros = 3;
+                                 }
+
+                                for(int i = 0; i<cantRegistros; i++)
                                 {
                                     int saltoLinea = 0;
 
@@ -379,29 +388,19 @@ int main()
                                     window.clear();
                                     window.draw(spritePuntajes);
 
-                                    if(registros.size()<= 3)
-                                    {
-                                        for(int i = 0; i<registros.size(); i++)
+                                        for(int i = 0; i<cantRegistros; i++)
                                         {
                                             window.draw(mostrarPuntajes[i]);
                                             window.draw(mostrarPuntos[i]);
                                         }
-                                    }
-                                    else
-                                    {
-                                        for(int i = 0; i<3; i++)
-                                        {
-                                            window.draw(mostrarPuntajes[i]);
-                                            window.draw(mostrarPuntos[i]);
-                                        }
-                                    }
+
                                     window.display();
                                 }
                             }
                         }
                         if(x == 2)
                         {
-                            window.close();
+                            exit(1);
                             break;
                         }
                     }
